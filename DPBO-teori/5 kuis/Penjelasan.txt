@@ -1,0 +1,114 @@
+--------------------------------------------------------------------------------------------------------------
+--->INHERITANCE
+pada program ini saya membuat beberapa class baru sebagai induk inheritance terhadap beberapa class:
+1.
+- Human
+	- Pemilik
+	-Karyawan
+		-karyawanPengelola
+		-karyawanKios
+
+Penjelasan: karena beberapa class diatas dapat diklasifikasikan sebagai manusia/orang, maka dapat dibuat satu 
+		class human. dan di dalam restoran sendiri terdapat hirarki dari mulai pemilik, karyawan, dan jenis karyawan 		lainnya	
+
+2.
+-Menu
+	-Makanan
+	-Minuman
+Penjelasan: karena makanan dan minuman dapat disatu-jeniskan menjadi sebuah menu
+
+pembuatan class untuk inheritence tersebut karena melihat beberapa class memiliki sifat dan atribut yang mirip 
+sehingga dapat dibuat sebuah class induk untuk mewariskan atribut-atribut yang serupa
+-------------------------------------------------------------------------------------------------------------
+--->Composite
+pada program ini terdapat beberapa Composite
+1. Human ---> Alamat
+	pada bagian class human terdapat class alaman yang berisi alamat detail Human
+2. Transaksi ---> karyawanKios, karyawanPengelola, makanan, minuman
+	composit tersebut dimaksudkan agar bisa mambuat sebuah data transaksi yang lengkap
+3. PembagianTransaksiPerHari ---> pemilik, transaksi
+	membutuhkan semua transaksi pada tgl ke x, ditotalkan lalu diberikan ke pemilik
+-------------------------------------------------------------------------------------------------------------
+untuk class nya:
+Human
+-NoKTP
+-nama
+-alamat
+
+Karyawan
+- NoKTP
+- nama
+- alamat
+- liburShift (nama 1 hari karyawan libur dalam seminggu)
+
+Alamat
+-jalan
+-Desa atau Kelurahan
+-Kecamatan
+-Kabupaten atau Kota
+-Provinsi
+-Negara (Boleh tidak dipakai jika satu negara)
+
+KaryawanKios
+- kodeKios
+- NoKTP
+- nama
+- alamat
+- liburShift (nama 1 hari karyawan libur dalam seminggu)
+
+
+Transaksi
+- kodeKios
+- tanggal
+- kodeMakanan (bisa kosong jika hanya memesan minuman)
+- kodeMinuman (bisa kosong jika hanya memesan makanan)
+(satu transaksi bisa terdiri dari banyak makanan dan minuman, bisa dipikirkan cara penyimpanan datanya)
+- kodeKaryawanKios
+- kodeKaryawanPengelola
+
+Menu
+- kodeKios
+- harga
+- keterangan
+
+Makanan
+- kodeMakanan
+- kodeKios
+- namaMakanan
+- harga
+- keterangan
+
+
+Minuman
+- kodeMinuman
+- kodeKios
+- namaMinuman
+- harga
+- keterangan
+
+
+PemilikKios
+- kodePemilikKios
+- kodeKios (dapat multivalue atau banyak)
+- NoKTP
+- nama
+- alamat
+
+
+KaryawanPengelola
+- kodeKaryawanPengelola
+- NoKTP
+- nama
+- alamat
+- liburShift (berisi 1 hari libur dalam seminggu)
+
+
+PembagianTransaksiPerHari
+- kodeKios
+- omsetDibagikan
+- bagianPengelola
+- tanggal
+- pemilik(komposit obj pemilik)
+- transaksi(multi value)(komposit dari obj transaksi)
+
+

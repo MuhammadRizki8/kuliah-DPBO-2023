@@ -1,0 +1,19 @@
+1
+2
+1234567890
+Budi
+Laki-laki
+Universitas Indonesia
+budi@ui.ac.id
+19001
+Fakultas Ilmu Komputer
+Teknik Informatika
+1234567891
+Budha
+Laki-laki
+Universitas Indonesia
+budha@ui.ac.id
+1893
+Fakultas Ilmu Agama
+Agama Budha
+2
